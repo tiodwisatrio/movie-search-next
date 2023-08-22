@@ -7,7 +7,9 @@ import axios from "axios";
 import Genres from "./Genres";
 import { BsPlayFill } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
+import { FiInstagram, FiLinkedin, FiGithub, FiMail, FiPhone } from 'react-icons/fi'
 import dynamic from "next/dynamic";
+import Link from "next/link";
 
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
@@ -87,8 +89,8 @@ const Home = () => {
         <div className="relative">
             {isLoading && <Loading />}
             <div className="container mx-auto flex items-center relative">
-                <div className="flex flex-col lg:flex-row gap-10 lg:mx-10 py-4">
-                    <div className="mx-auto flex-none relative">
+                <div className="flex flex-col lg:flex-row gap-4 lg:mx-10 py-4 w-full">
+                    <div className="mx-auto flex-none relative w-[30%]">
                         {/* create Image Component from Next Image */}
                         <Image
                             src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`}
@@ -96,17 +98,17 @@ const Home = () => {
                             width={300}
                             height={500}
                             className="rounded object-cover"
-                            onLoad={() => setIsImageLoading(!isImageLoading)}
+                            onLoad={() => setIsImageLoading(false)}
                             priority
                         />
                         {isImageLoading && <Loading />}
                     </div>
 
-                    <div className="space-y-5">
+                    <div className="space-y-4 w-[70%]">
                         <div className="uppercase -translate-y-3 text-[40px] font-medium  text-white">
                             {movie?.title}
                         </div>
-                        <div className="flex gap-4 flex-wrap">
+                        <div className="flex gap-4 flex-wrap text-[10px]">
                             {movie?.genres.map((genre, index) => (
                                 <Genres
                                     key={genre?.id}
@@ -117,7 +119,7 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-2 md:gap-6">
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-[12px]">
                             <p>Language: {movie?.original_language.toLocaleUpperCase()}</p>
                             <p>Release Date: {movie?.release_date}</p>
                             <p>Runtime: {movie?.runtime} minutes</p>
@@ -125,19 +127,51 @@ const Home = () => {
                         </div>
 
                         <div className="pt-10 space-y-2 pr-4">
-                            <h4>OVERVIEW :</h4>
-                            <p className="line-clamp-6">{movie?.overview}</p>
+                            <h4 className="text-[20px]">OVERVIEW</h4>
+                            <p className="line-clamp-6 text-sm opacity-80">{movie?.overview}</p>
                         </div>
 
                         <div
                             className="inline-block pt-6 cursor-pointer"
                             onClick={() => setShowPlayer(true)}
                         >
-                            <div className="flex gap-2 items-center bg-white hover:bg-accent text-black px-4 py-2">
+                            <div className="flex gap-2 items-center bg-white hover:bg-accent text-black px-4 py-2 rounded">
                                 <BsPlayFill size={24} />
                                 <p>Watch Trailer</p>
                             </div>
                         </div>
+                    </div>
+
+
+                    {/* My Profile */}
+                    <div className="flex flex-col w-[30%] border-l-2 border-gray-600">
+                        <div className="ml-4">
+                            <h2 className="text-[20px]">Lets Talk With Me👋</h2>
+                            <div className="mt-16 flex flex-col gap-6 text-gray-400">
+                                <Link href="https://instagram.com/tiodwisatrio_" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                    <FiInstagram />
+                                    <p>tiodwisatrio_</p>
+                                </Link>
+                                <Link href="https://www.linkedin.com/in/tio-dwi-satrio-a91153177/" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                    <FiLinkedin />
+                                    <p>Tio Dwi Satrio</p>
+                                </Link>
+                                <Link href="https://github.com/tiodwisatrio" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                    <FiGithub />
+                                    <p>tiodwisatrio</p>
+                                </Link>
+                                <Link href="mailto:tiodwisatrio27@gmail.com" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                    <FiMail />
+                                    <p>tiodwisatrio27@gmail.com</p>
+                                </Link>
+                                <Link href="https://api.whatsapp.com/send/?phone=6288972061745" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                    <FiPhone />
+                                    <p>088972061745</p>
+                                </Link>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
