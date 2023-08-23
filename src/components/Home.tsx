@@ -144,8 +144,8 @@ const Home = () => {
 
 
                     {/* My Profile */}
-                    <div className="flex flex-col border-l-2 border-gray-600 mt-10 px-4 md:px-0">
-                        <div className="ml-4">
+                    <div className="flex flex-col border-0 md:border-l-2 md:border-gray-600 mt-10 px-4 md:px-0">
+                        <div className="ml-4 md:ml-8">
                             <h2 className="text-[20px]">Lets Talk With Me👋</h2>
                             <div className="mt-8 pb-4 md:pb-0 md:mt-16 flex flex-col gap-6 text-gray-400">
                                 <Link href="https://instagram.com/tiodwisatrio_" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
