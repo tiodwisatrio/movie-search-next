@@ -148,23 +148,23 @@ const Home = () => {
                         <div className="ml-4">
                             <h2 className="text-[20px]">Lets Talk With Me👋</h2>
                             <div className="mt-16 flex flex-col gap-6 text-gray-400">
-                                <Link href="https://instagram.com/tiodwisatrio_" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                <Link href="https://instagram.com/tiodwisatrio_" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
                                     <FiInstagram />
                                     <p>tiodwisatrio_</p>
                                 </Link>
-                                <Link href="https://www.linkedin.com/in/tio-dwi-satrio-a91153177/" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                <Link href="https://www.linkedin.com/in/tio-dwi-satrio-a91153177/" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
                                     <FiLinkedin />
                                     <p>Tio Dwi Satrio</p>
                                 </Link>
-                                <Link href="https://github.com/tiodwisatrio" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                <Link href="https://github.com/tiodwisatrio" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
                                     <FiGithub />
                                     <p>tiodwisatrio</p>
                                 </Link>
-                                <Link href="mailto:tiodwisatrio27@gmail.com" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                <Link href="mailto:tiodwisatrio27@gmail.com" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
                                     <FiMail />
                                     <p>tiodwisatrio27@gmail.com</p>
                                 </Link>
-                                <Link href="https://api.whatsapp.com/send/?phone=6288972061745" target="_blank" className="flex flex-row gap-x-2 items-center">
+                                <Link href="https://api.whatsapp.com/send/?phone=6288972061745" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
                                     <FiPhone />
                                     <p>088972061745</p>
                                 </Link>
