@@ -104,11 +104,11 @@ const Home = () => {
                         {isImageLoading && <Loading />}
                     </div>
 
-                    <div className="space-y-4 w-[70%]">
-                        <div className="uppercase -translate-y-3 text-[40px] font-medium  text-white">
+                    <div className="space-y-4 ">
+                        <div className="uppercase text-[40px] font-medium text-white text-center md:text-start">
                             {movie?.title}
                         </div>
-                        <div className="flex gap-4 flex-wrap text-[10px]">
+                        <div className="flex gap-4 flex-wrap text-[10px] justify-center md:justify-start">
                             {movie?.genres.map((genre, index) => (
                                 <Genres
                                     key={genre?.id}
@@ -119,20 +119,20 @@ const Home = () => {
                             ))}
                         </div>
 
-                        <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-[12px]">
+                        <div className="flex flex-col md:flex-row gap-2 md:gap-6 text-[12px] justify-center md:justify-start items-center md:items-start">
                             <p>Language: {movie?.original_language.toLocaleUpperCase()}</p>
                             <p>Release Date: {movie?.release_date}</p>
                             <p>Runtime: {movie?.runtime} minutes</p>
                             <p>Rating: {movie?.vote_average}⭐</p>
                         </div>
 
-                        <div className="pt-10 space-y-2 pr-4">
+                        <div className="px-8 md:px-0 pt-6 md:pt-10 space-y-2 pr-4">
                             <h4 className="text-[20px]">OVERVIEW</h4>
                             <p className="line-clamp-6 text-sm opacity-80">{movie?.overview}</p>
                         </div>
 
                         <div
-                            className="inline-block pt-6 cursor-pointer"
+                            className="inline-block pt-6 px-8 md:px-0 cursor-pointer"
                             onClick={() => setShowPlayer(true)}
                         >
                             <div className="flex gap-2 items-center bg-white hover:bg-accent text-black px-4 py-2 rounded">
@@ -144,10 +144,10 @@ const Home = () => {
 
 
                     {/* My Profile */}
-                    <div className="flex flex-col w-[30%] border-l-2 border-gray-600">
+                    <div className="flex flex-col border-l-2 border-gray-600 mt-10 px-4 md:px-0">
                         <div className="ml-4">
                             <h2 className="text-[20px]">Lets Talk With Me👋</h2>
-                            <div className="mt-16 flex flex-col gap-6 text-gray-400">
+                            <div className="mt-8 pb-4 md:pb-0 md:mt-16 flex flex-col gap-6 text-gray-400">
                                 <Link href="https://instagram.com/tiodwisatrio_" target="_blank" className="flex flex-row gap-x-2 items-center hover:text-white">
                                     <FiInstagram />
                                     <p>tiodwisatrio_</p>
