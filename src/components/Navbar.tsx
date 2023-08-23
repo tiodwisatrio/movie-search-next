@@ -13,7 +13,7 @@ const Navbar = () => {
     };
     return (
         <nav className="py-8 px-8">
-            <div className="container mx-auto flex justify-between items-center ">
+            <div className="container mx-auto flex justify-start md:justify-between md:items-center flex-col md:flex-row gap-y-4 md:gap-y-0 ">
                 <Link href="/">
                     <div className="text-[20px] font-medium">MV_Search</div>
                 </Link>
