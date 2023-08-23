@@ -18,9 +18,9 @@ const Navbar = () => {
                     <div className="text-[20px] font-medium">MV_Search</div>
                 </Link>
                 <form action="" onSubmit={searchMovie}>
-                    <div className="space-x-4">
+                    <div className="space-x-4 text-sm">
                         <input
-                            className="bg-[#212529] px-4 py-2 outline-none placeholder:text-textColor rounded"
+                            className="bg-[#212529] px-4 py-2 outline-none placeholder:text-gray-500 rounded"
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             type="text"
